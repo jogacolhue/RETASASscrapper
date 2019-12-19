@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "dba1c479-0d8a-44c5-a33c-477f2efe962f",
+		"name": "Ratasas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pagina Inicial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ddlDepartamento",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "ddlTipoProducto",
+							"value": "02",
+							"type": "text"
+						},
+						{
+							"key": "ddlProducto",
+							"value": "01",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ddlCondicion",
+							"value": "00083|2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.sbs.gob.pe/app/retasas/paginas/retasasinicio.aspx",
+					"protocol": "http",
+					"host": [
+						"www",
+						"sbs",
+						"gob",
+						"pe"
+					],
+					"path": [
+						"app",
+						"retasas",
+						"paginas",
+						"retasasinicio.aspx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista General",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/inicial",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"inicial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalle por producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/producto/23/01",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"producto",
+						"23",
+						"01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalle por condicion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/condicion/23/01/01",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"condicion",
+						"23",
+						"01",
+						"01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtencion Retasas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/retasas/23/01/01/00085|2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"retasas",
+						"23",
+						"01",
+						"01",
+						"00085|2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
